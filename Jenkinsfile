@@ -1,8 +1,8 @@
 pipeline {
   environment {
-    dockerImage = "sanchita1505/mynginxapp"
-    registryCredential = 'sanchita1505'
+    
     dockerImage = ''
+    registryCredential = 'sanchita1505/mynginxapp'
     }
     agent any
     stages {
