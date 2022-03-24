@@ -13,10 +13,12 @@ pipeline {
             }
         }
         stage('Build Image') {
+          agent{
+            docker{image 'node:12-alpine'}
+          }
             steps {
-               script {
-                 dockerImage = docker.build imagename
-               }
+               sh 'npm install'
+              sh 'npm run build'
             }
         }
         stage('Deploy Image') {
