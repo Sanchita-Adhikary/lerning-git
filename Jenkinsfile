@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Git Clone') {
             steps {
-                git([url: 'https://github.com/Sanchita-Adhikary/lerning-git.git', credentialsId: 'Sanchita1505'])
+                git([url: 'https://github.com/Sanchita-Adhikary/lerning-git.git', credentialsId: 'github'])
             }
         }
         stage('Build Image') {
