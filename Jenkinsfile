@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imagename = "sanchita1505/mynginxapp"
-    registryCredential = 'Sanchita@1505'
+    registryCredential = 'sanchita1505:Sanchita@1505'
     dockerImage = ''
 
     }
