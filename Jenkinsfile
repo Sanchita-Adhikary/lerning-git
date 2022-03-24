@@ -1,8 +1,9 @@
 pipeline {
   environment {
-    
+    imagename = "sanchita1505/mynginxapp"
+    registryCredential = 'sanchita1505'
     dockerImage = ''
-    registryCredential = 'sanchita1505/mynginxapp'
+
     }
     agent any
     stages {
@@ -14,7 +15,7 @@ pipeline {
         stage('Build Image') {
             steps {
                script {
-                 dockerImage = docker.build registryCredential
+                 dockerImage = docker.build imagename
                }
             }
         }
