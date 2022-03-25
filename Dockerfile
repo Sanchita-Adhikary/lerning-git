@@ -1,3 +1,8 @@
-FROM nginx
-
-ADD index.html /usr/share/nginx/html
+FROM mynginxapp
+LABEL maintainer="salagars"
+RUN apk add --update nodejs nodejs-npm
+COPY . /src
+WORKDIR /src
+RUN npm install
+EXPOSE 8080
+ENTRYPOINT ["node", "./app.js"]
