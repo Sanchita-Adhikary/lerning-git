@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imagename = "sanchita1505/mynginxapp"
-    registryCredential = '833cdf2e-f88c-4fd2-af32-191ca92f1600'
+    registryCredential = 'dockerhubid'
     dockerImage = ''
 
     }
@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Git Clone') {
             steps {
-                git([url: 'https://github.com/Sanchita-Adhikary/lerning-git.git', credentialsId: '346c913f-835e-4eef-8db9-e01d9e438b91'])
+                git([url: 'https://github.com/Sanchita-Adhikary/lerning-git.git', credentialsId: 'githubId'])
             }
         }
         stage('Build Image') {
